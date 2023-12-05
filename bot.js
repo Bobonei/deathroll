@@ -1,6 +1,9 @@
+// Require and configure dotenv
+require('dotenv').config();
+
 const { Client, Intents } = require('discord.js');
 
-const client = new Client({ 
+const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
 });
 
@@ -29,12 +32,12 @@ client.on('messageCreate', message => {
     const rollResult = Math.floor(Math.random() * maxNumber) + 1;
 
     if (rollResult === 1) {
-      return message.channel.send(`🎲You rolled a 1 out of ${maxNumber}! and lost the game. 😞`);
+      return message.channel.send(`🎲 You rolled a 1 out of ${maxNumber}! and lost the game. 😞`);
     }
 
     message.channel.send(`🎲 You rolled a ${rollResult} out of ${maxNumber}!`);
   }
 });
 
-// Replace 'YOUR_BOT_TOKEN' with your actual bot token
-client.login('MTE4MTQzMjAxNzIxNzQwNDk3MA.GZWz1b.sgeNUmBTSShISSg3QfxB5aPC3BR8BZ9l26bolw');
+// Access token from environment variable
+client.login(process.env.BOT_TOKEN);
