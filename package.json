@@ -1,16 +1,16 @@
 {
   "name": "deathroll",
   "version": "1.0.0",
-  "description": "",
-  "main": "bot.js", // Update this line to your bot's entry point file
+  "description": "Your bot description",
+  "main": "bot.js",
   "scripts": {
-    "start": "node bot.js" // Add a "start" script that runs your bot
+    "start": "node bot.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^13.17.1",
     "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
