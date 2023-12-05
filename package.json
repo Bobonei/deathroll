@@ -2,10 +2,9 @@
   "name": "deathroll",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bot.js", // Update this line to your bot's entry point file
   "scripts": {
-    "start": "node bot.js", // Add this line to start your bot
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bot.js" // Add a "start" script that runs your bot
   },
   "keywords": [],
   "author": "",
